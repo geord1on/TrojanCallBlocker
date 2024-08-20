@@ -52,15 +52,18 @@
 ## Τεχνολογίες
 Οι κύριες τεχνολογίες και εργαλεία που χρησιμοποιήθηκαν είναι:
 
--Android Studio
--Java
--Android Telephony API
+- Android Studio
+- Java
+- Android Telephony API
 
 ## Συγγραφέας
 
 Όνομα: [George Dionysiou]
+
 Email: georgediongr@gmail.com
+
 LinkedIn: https://www.linkedin.com/in/george-dionysiou-944125278/
+
 GitHub: geord1on
 
 ## Άδεια
