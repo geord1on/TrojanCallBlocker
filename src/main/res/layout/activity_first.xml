@@ -1,0 +1,83 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp">
+
+
+    <!-- Top Divider Line -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#CCCCCC"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Toggle Button with Shadow -->
+    <Button
+        android:id="@+id/toggleButton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="OFF"
+        android:background="@drawable/button_background_off"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="20dp"
+        android:elevation="4dp"/>
+
+    <!-- Shadow for Image and Text -->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="4dp">
+
+        <!-- Avatar ImageView -->
+        <ImageView
+            android:id="@+id/avatarImageView"
+            android:layout_width="110dp"
+            android:layout_height="104dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/avvvatar"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="8dp" />
+
+        <!-- TextView -->
+        <TextView
+            android:id="@+id/instructionsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/avatarImageView"
+            android:layout_centerVertical="true"
+            android:text="      Μπλοκάρισμα κλήσεων για αριθμούς που δεν βρίσκονται στις επαφές σας."
+            android:textColor="@android:color/black"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:scrollHorizontally="true"
+            android:layout_toRightOf="@id/avatarImageView" />
+    </RelativeLayout>
+
+
+
+    <!-- Bottom Divider Line -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#CCCCCC"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Open Main Button with Shadow -->
+    <Button
+        android:id="@+id/openMainButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Blacklist"
+        android:background="@drawable/button_background"
+        android:textColor="@android:color/white"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:elevation="4dp"/>
+</LinearLayout>

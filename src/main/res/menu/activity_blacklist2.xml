@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <item
+        android:id="@+id/import_blacklist"
+        android:onClick="onImportBlacklist"
+        android:title="@string/blacklist_import" />
+
+    <item
+        android:id="@+id/export_blacklist"
+        android:onClick="onExportBlacklist"
+        android:title="@string/blacklist_export" />
+
+
+    <item
+        android:id="@+id/about_us"
+        android:onClick="onAbooutus"
+        android:title="@string/about_us" />
+
+
+
+</menu>

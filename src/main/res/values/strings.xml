@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="blacklist_call_details">
+        <item quantity="one">Κλήση στις %2$s</item>
+        <item quantity="other">%1$d κλήσεις, τελευταία: %2$s</item>
+    </plurals>
+
+    <!-- BlacklistActivity -->
+    <string name="app_name">TrojanCallBlocker</string>
+    <string name="blacklist_block_hidden_numbers">Μπλοκάρισμα αποκρύψεων</string>
+    <string name="blacklist_show_notifications">Προβολή ειδοποιήσεων</string>
+    <string name="blacklist_permissions_required">TrojanCallBlocker δεν έχει την άδεια να τρέξει.</string>
+    <string name="blacklist_request_permissions">Ζητείται άδεια</string>
+    <string name="all_calls">Αποδοχή όλες οι κλήσεις</string>
+    <string name="allow_contacts">Αποδοχή μόνο απο τις επαφές</string>
+    <string name="allow_list">Αποδοχή μόνο απο τη λίστα</string>
+    <string name="block_list">Μπλοκάρισμα απο τη λίστα</string>
+    <string name="block_all">Μπλοκάρισμα τα πάντα</string>
+
+    <string name="about_us">Σχετικά με το app</string>
+    <string name="blacklist_import">Εισαγωγή Blacklist</string>
+    <string name="blacklist_export">Εξαγωγή Blacklist</string>
+    <string name="blacklist_exported_to">Εξαγωγή σε</string>
+
+    <!-- EditActivity -->
+    <string name="edit_add_number">Προσθήκη αριθμού</string>
+    <string name="edit_edit_number">Επεξεργασία αριθμού</string>
+    <string name="edit_save">Αποθήκευση</string>
+    <string name="edit_cancel">Ακύρωση</string>
+    <string name="edit_delete">Διαγραφή</string>
+    <string name="edit_name">Όνομα</string>
+    <string name="edit_name_hint">Ενοχλητικός Spammer</string>
+    <string name="edit_number">Αριθμός</string>
+    <string name="edit_number_hint">+30-1234567890</string>
+    <string name="edit_number_hints">Εισαγάγετε τον αριθμό σε μορφή +ΧΩΡΑ-ΑΡΙΘΜΟΣ (όπως θα έδειχνε το Android στο πρόγραμμα κλήσης σας). Χρησιμοποιήστε το \"*\" ως μπαλαντέρ για μηδέν ή περισσότερα ψηφία και \"#\" για ακριβώς ένα ψηφίο.</string>
+    <string name="edit_must_not_be_empty">Δεν πρέπει να είναι κενό</string>
+    <string name="edit_changes_saved">Οι αλλαγές αποθηκεύτηκαν</string>
+
+    <!-- CallReceiver -->
+
+    <string name="receiver_notify_no_call_allowed">Ολες οι κλήσεις μπλοκάρονται</string>
+    <string name="receiver_notify_not_found_in_contacts">Ο αριθμός δεν βρέθηκε στις επαφές</string>
+    <string name="receiver_notify_number_was_not_in_list">Ο αριθμός δεν βρέθηκε στην λίστα των επιτρεπόμενων καλούντων</string>
+    <string name="receiver_notify_number_was_in_list">Ο αριθμός βρέθηκε στην λίστα μη επιτρεπόμενων καλούντων</string>
+
+
+    <string name="receiver_notify_call_rejected">Η κλήση απορρίφθηκε</string>
+    <string name="receiver_notify_private_number">Προσωπικός αριθμός</string>
+    <string name="receiver_notify_unknown_caller">Άγνωστος καλών</string>
+    <string name="call_blocking_unsupported">Δεν γίνεται να μπλοκάρετε κλήσεις σε αυτήν την έκδοση Android</string>
+
+</resources>
