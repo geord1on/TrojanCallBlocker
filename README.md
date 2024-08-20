@@ -58,7 +58,7 @@
 
 ## Συγγραφέας
 
-Όνομα: [George Dionysiou]
+Όνομα: Γεώργιος Διονυσίου / George Dionysiou
 
 Email: georgediongr@gmail.com
 
