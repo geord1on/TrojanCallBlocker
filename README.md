@@ -34,7 +34,7 @@
 
 1. **Κλωνοποίηση του repository**:
    ```bash
-   git clone https://github.com/username/TrojanCallBlocker.git
+   git clone https://github.com/geord1on/TrojanCallBlocker.git
    cd TrojanCallBlocker
    
 ## Χρήση
