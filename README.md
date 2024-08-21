@@ -75,7 +75,7 @@ Email: georgediongr@gmail.com
 
 LinkedIn: https://www.linkedin.com/in/george-dionysiou-944125278/
 
-GitHub: geord1on
+GitHub: https://github.com/geord1on
 
 ## Άδεια
 
