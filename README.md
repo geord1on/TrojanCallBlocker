@@ -66,6 +66,7 @@
 - Android Studio
 - Java
 - Android Telephony API
+- XML
 
 ## Συγγραφέας
 
