@@ -16,11 +16,11 @@ public class AboutUsActivity extends AppCompatActivity {
         TextView githubLink = findViewById(R.id.github_link);
 
         // Εισαγάγετε τις πληροφορίες σας για την πτυχιακή εργασία
-        aboutUsText.setText("Αυτό είναι το application της πτυχιακής εργασίας " +
+        aboutUsText.setText("Αυτό είναι το application της πτυχιακής εργασίας μου " +
                 "με θέμα 'Νομική Πληροφορική και Spam κλήσεις'.");
 
         // Ρυθμίστε το σύνδεσμο GitHub
-        githubLink.setText("https://github.com/your-repository");
+        githubLink.setText("https://github.com/geord1on/TrojanCallBlocker");
         githubLink.setMovementMethod(LinkMovementMethod.getInstance());
     }
 }
