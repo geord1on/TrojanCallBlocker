@@ -3,6 +3,7 @@ package at.example.trojancallblocker;
 import android.Manifest;
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
@@ -10,6 +11,8 @@ import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.telephony.PhoneStateListener;
+import android.telephony.TelephonyManager;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -20,6 +23,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.File;
+import java.lang.reflect.Method;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -33,6 +37,7 @@ public class FirstActivity extends AppCompatActivity {
     private SharedPreferences sharedPreferences;
     private static final String PREFS_NAME = "CallBlockerPrefs";
     private static final String BLOCKING_ENABLED_KEY = "BlockingEnabled";
+    private static final String BLOCK_HIDDEN_NUMBERS_KEY = "BlockHiddenNumbers"; // Νέο κλειδί για τον αποκλεισμό απόκρυψης αριθμών
     private Settings settings;
     private static final int DIALOG_LOAD_FILE = 1;
     private static final int PERMISSION_REQUEST_CODE = 100;
@@ -59,6 +64,12 @@ public class FirstActivity extends AppCompatActivity {
         updateButton(toggleButton);
 
         adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, new LinkedList<Number>());
+
+        // Αποκατάσταση της κατάστασης αποκλεισμού απόκρυψης αριθμών κατά την εκκίνηση
+        boolean blockHiddenNumbers = sharedPreferences.getBoolean(BLOCK_HIDDEN_NUMBERS_KEY, false);
+        if (blockHiddenNumbers) {
+            blockHiddenNumbers(true); // Ενεργοποίηση της λειτουργίας αν ήταν ενεργή
+        }
 
         toggleButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -115,6 +126,12 @@ public class FirstActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.activity_blacklist, menu);
+
+        // Επαναφορά της κατάστασης των μενού
+        MenuItem blockHiddenItem = menu.findItem(R.id.block_hidden_numbers);
+        boolean blockHiddenNumbers = sharedPreferences.getBoolean(BLOCK_HIDDEN_NUMBERS_KEY, false);
+        blockHiddenItem.setChecked(blockHiddenNumbers);
+
         return true;
     }
 
@@ -145,8 +162,50 @@ public class FirstActivity extends AppCompatActivity {
     }
 
     public void onBlockHiddenNumbers(MenuItem item) {
-        settings.blockHiddenNumbers(!item.isChecked());
-        item.setChecked(!item.isChecked());
+        boolean newCheckedStatus = !item.isChecked();
+        item.setChecked(newCheckedStatus);
+
+        // Αποθήκευση της επιλογής του χρήστη
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putBoolean(BLOCK_HIDDEN_NUMBERS_KEY, newCheckedStatus);
+        editor.apply();
+
+        blockHiddenNumbers(newCheckedStatus);
+    }
+
+    private void blockHiddenNumbers(boolean shouldBlock) {
+        if (shouldBlock) {
+            TelephonyManager telephonyManager = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
+            telephonyManager.listen(new PhoneStateListener() {
+                @Override
+                public void onCallStateChanged(int state, String incomingNumber) {
+                    super.onCallStateChanged(state, incomingNumber);
+
+                    if (state == TelephonyManager.CALL_STATE_RINGING) {
+                        if (incomingNumber == null || incomingNumber.isEmpty()) {
+                            // Μπλοκάρει την κλήση με απόκρυψη αριθμού
+                            endCall();
+                            Toast.makeText(getApplicationContext(), "Μπλοκάρισμα Απόκρυψης", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                }
+            }, PhoneStateListener.LISTEN_CALL_STATE);
+        } else {
+            // Μπορείς να προσθέσεις κώδικα για να απενεργοποιήσεις τον listener αν χρειάζεται
+        }
+    }
+
+    // Μέθοδος για να τερματίσεις την κλήση (χρειάζεται ειδικά permissions)
+    private void endCall() {
+        try {
+            TelephonyManager telephonyManager = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
+            Class<?> telephonyClass = Class.forName(telephonyManager.getClass().getName());
+            Method endCall = telephonyClass.getDeclaredMethod("endCall");
+            endCall.setAccessible(true);
+            endCall.invoke(telephonyManager);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public void onShowNotifications(MenuItem item) {
@@ -223,3 +282,4 @@ public class FirstActivity extends AppCompatActivity {
         }
     }
 }
+

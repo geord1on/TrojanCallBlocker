@@ -15,7 +15,7 @@
     <string name="allow_contacts">Αποδοχή μόνο απο τις επαφές</string>
     <string name="allow_list">Αποδοχή μόνο απο τη λίστα</string>
     <string name="block_list">Μπλοκάρισμα απο τη λίστα</string>
-    <string name="block_all">Μπλοκάρισμα τα πάντα</string>
+    <string name="block_all">Μπλοκάρισμα όλα</string>
 
     <string name="about_us">Σχετικά με το app</string>
     <string name="blacklist_import">Εισαγωγή Blacklist</string>
@@ -39,9 +39,9 @@
     <!-- CallReceiver -->
 
     <string name="receiver_notify_no_call_allowed">Ολες οι κλήσεις μπλοκάρονται</string>
-    <string name="receiver_notify_not_found_in_contacts">Ο αριθμός δεν βρέθηκε στις επαφές</string>
-    <string name="receiver_notify_number_was_not_in_list">Ο αριθμός δεν βρέθηκε στην λίστα των επιτρεπόμενων καλούντων</string>
-    <string name="receiver_notify_number_was_in_list">Ο αριθμός βρέθηκε στην λίστα μη επιτρεπόμενων καλούντων</string>
+    <string name="receiver_notify_not_found_in_contacts">Αριθμός εκτός επαφών</string>
+    <string name="receiver_notify_number_was_not_in_list">Αριθμός εκτός Blacklist</string>
+    <string name="receiver_notify_number_was_in_list">Αριθμός εντός Blacklist</string>
 
 
     <string name="receiver_notify_call_rejected">Η κλήση απορρίφθηκε</string>
