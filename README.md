@@ -1,5 +1,5 @@
 ![eikonaapp](https://github.com/user-attachments/assets/1c92cde8-4159-4065-b656-5a7423ba56f5)
-# TrojanCallBlocker
+# TrojanCallBlocker 🐎📞
 
 Αυτή είναι η πτυχιακή μου εργασία για το τμήμα πληροφορικής ΑΠΘ.
 
