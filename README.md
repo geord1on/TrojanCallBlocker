@@ -80,7 +80,7 @@ LinkedIn: https://www.linkedin.com/in/george-dionysiou-944125278/
 
 GitHub: https://github.com/geord1on
 
-## Άδεια
+## Πολιτική Απορρήτου / Άδεια
 
 Το TrojanCallBlocker αποθηκεύει τους αποκλεισμένους αριθμούς σε μια τοπική βάση δεδομένων.
 
