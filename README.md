@@ -1,7 +1,8 @@
 ![eikonaapp](https://github.com/user-attachments/assets/1c92cde8-4159-4065-b656-5a7423ba56f5)
 ## Βίντεο Παρουσίασης 🎥
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Wm_D-hdSLLE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![TrojanCallBlocker Video](https://img.youtube.com/vi/Wm_D-hdSLLE/0.jpg)](https://youtu.be/Wm_D-hdSLLE)
+
 
 # TrojanCallBlocker 🐎📞🚫
 
