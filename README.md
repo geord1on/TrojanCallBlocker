@@ -1,7 +1,8 @@
 ![eikonaapp](https://github.com/user-attachments/assets/1c92cde8-4159-4065-b656-5a7423ba56f5)
 ## Βίντεο Παρουσίασης 🎥
 
-[![TrojanCallBlocker Video](https://youtu.be/t9Q--IALZQo)
+[![TrojanCallBlocker Video](https://img.youtube.com/vi/t9Q--IALZQo/0.jpg)](https://youtu.be/t9Q--IALZQo)
+
 
 
 # TrojanCallBlocker 🐎📞🚫
