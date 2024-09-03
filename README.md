@@ -102,5 +102,5 @@ GitHub: https://github.com/geord1on
 
 
  
- 🖊️ Έλεγξε τον φάκελο (COPYRIGHT.txt)  για περισσότερα [Δείτε το πλήρες κείμενο των πνευματικών δικαιωμάτων]
+ 🖊️ Έλεγξε τον φάκελο [COPYRIGHT.txt](#COPYRIGHT)
 
