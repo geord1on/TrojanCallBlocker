@@ -3,7 +3,6 @@
 
 Δείτε το βίντεο παρουσίασης εδώ: [Δείτε το βίντεο στο YouTube](https://www.youtube.com/watch?v=yfHVahaIWUc)
 
-[![TrojanCallBlocker Video](https://img.youtube.com/vi/t9Q--IALZQo/0.jpg)](https://www.youtube.com/watch?v=yfHVahaIWUc)
 
 
 
